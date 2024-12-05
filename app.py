@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 from src.config import Config
 from src.quiz import db
 from src.database import DatabaseManager
@@ -6,6 +7,7 @@ from src.quiz import Quiz, Question
 
 app = Flask(__name__)
 app.config.from_object(Config)
+CORS(app)
 db.init_app(app)
 
 @app.route('/api/quizzes', methods=['GET'])
