@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from src.config import Config
 from src.quiz import db
 from src.database import DatabaseManager
@@ -51,6 +51,20 @@ def get_quiz(quiz_id):
             'questions': questions
         }
     })
+
+@app.route('/act', methods=['GET'])
+def activities():
+    activities = [
+        {
+            'activity': 'activity 1',
+            'description': 'description 1'
+        },
+        {
+            'activity': 'activity 2',
+            'description': 'description 2'
+        }
+    ]
+    return render_template('activities.html', activities=activities)
 
 if __name__ == '__main__':
     DatabaseManager.init_db(app)
