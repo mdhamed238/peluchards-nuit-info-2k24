@@ -13,28 +13,87 @@ main {
 div#wave-container {
     height: 80vh;
     width: 100vw;
+    justify-content: center;
+    align-content: center;
 }
 
 img#wave-front {
     height: 80vh;
-    width: 100%;
+    width: 400%;
     padding:0;
     margin:0;
-
+    filter: brightness(0.9) contrast(1.5) saturate(1) blur(1px) ;
+    
+    opacity: 0.95;
     animation: wave 5s linear infinite;
 }
 
+img#wave-1{
+    position: relative;
+    top: -100%;
+    left: 0;
+    z-index: -2;
+    height: 80vh;
+    width: 400%;
+    padding:0;
+    margin:0;
+    animation: wave 4s linear infinite;
+    
+}  
+img#wave-2{
+    position: relative;
+    top: -200%;
+    left: 0;
+    z-index: -2;
+    height: 80vh;
+    width: 400%;
+    padding:0;
+    margin:0;
+    animation: wave 5.5s linear infinite;
+    
+}
+img#wave-3{
+    position: relative;
+    top: -300%;
+    left: 0;
+    z-index: -2;
+    height: 80vh;
+    width: 400%;
+    padding:0;
+    margin:0;
+    animation: wave 5s linear infinite;
+    
+}
 @keyframes wave {
     0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(50%);
-    }
-    75% {
-        transform: translateX(-50%);
+        transform: translateX(-30%);
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(-3.5%);
+    }
+}
+
+img#boat {
+    position: relative;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: boat 2.5s linear infinite;
+
+}
+
+@keyframes boat {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(20deg) translateY(-2vh);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(-20deg) translateY(2vh);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg) translateY(0);
     }
 }
