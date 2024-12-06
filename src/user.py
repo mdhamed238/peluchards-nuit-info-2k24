@@ -8,7 +8,8 @@ class User(db.Model):
     id: Mapped[Integer] = mapped_column(primary_key=True)
     username: Mapped[String] = mapped_column(unique=True)
     email: Mapped[str] = mapped_column(unique=True)
-    password: Mapped[str]
-    collaborator = Mapped[bool] = mapped_column(default=False)
+    password: Mapped[str] = mapped_column()
+    editor = Mapped[bool] = mapped_column(default=False)
+    
     def check_password_verification(self, password):
         return check_password_hash(self.password)
