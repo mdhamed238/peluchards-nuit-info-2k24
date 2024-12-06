@@ -2,6 +2,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 main {
     flex:1;
@@ -9,32 +11,142 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    background-image: url('/static/images/sky.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    /*z-index: -100;*/
 }
 div#wave-container {
     height: 80vh;
     width: 100vw;
+    justify-content: center;
+    align-content: center;
 }
 
 img#wave-front {
+    position: relative;
+    top: 0;
+    left: 0;
     height: 80vh;
-    width: 100%;
+    width: 400%;
     padding:0;
     margin:0;
-
+    filter: brightness(0.9) contrast(1.5) saturate(1) blur(1px) ;
+    z-index: 9;
+    opacity: 0.95;
     animation: wave 5s linear infinite;
 }
 
+img#wave-1{
+    position: relative;
+    top: -100%;
+    left: 0;
+    z-index: 3;
+    height: 80vh;
+    width: 400%;
+    padding:0;
+    margin:0;
+    animation: wave 4s linear infinite;
+    
+}  
+img#wave-2{
+    position: relative;
+    top: -200%;
+    left: 0;
+    z-index: 2;
+    height: 80vh;
+    width: 400%;
+    padding:0;
+    margin:0;
+    animation: wave 5.5s linear infinite;
+    
+}
+img#wave-3{
+    position: relative;
+    top: -300%;
+    left: 0;
+    z-index: 1;
+    height: 80vh;
+    width: 400%;
+    padding:0;
+    margin:0;
+    animation: wave 5s linear infinite;
+    
+}
 @keyframes wave {
     0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(50%);
-    }
-    75% {
-        transform: translateX(-50%);
+        transform: translateX(-30%);
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(-3.5%);
     }
+}
+
+img#boat {
+    position: relative;
+    width: 70%;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    animation: boat 2.5s linear infinite;
+
+}
+
+@keyframes boat {
+    0% {
+        transform: translate(-50%, -50%) rotate(10deg) translateY(-2vh);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(-10deg) translateY(1vh);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(10deg) translateY(-2vh);
+    }
+    /*100% {
+        transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+    }*/
+}
+
+div.scroll-wrapper {
+    position: relative;
+    top : -360%;
+    width: 100%; /* Largeur du conteneur parent */
+    overflow-x: auto; /* Active le défilement horizontal */
+    overflow-y: hidden; /* Pas de défilement vertical */
+    white-space: nowrap; /* Évite le retour à la ligne des éléments */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    z-index: 10;
+}
+div.scroll-wrapper::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+div#timeline {
+    display: flex;
+    gap: 1rem; /* Espacement entre les éléments */
+    padding: 1rem;
+    box-sizing: border-box;
+    width: max-content; /* Force la largeur à s'adapter au contenu */
+}
+
+div.timeline-item {
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    color:white;
+    border: 3px solid white;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+a.link-timeline {
+    text-decoration: underline;
+    color: white;
 }

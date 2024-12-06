@@ -1,10 +1,11 @@
-from flask import Flask, jsonify, render_template
-from flask import redirect, url_for
+from flask import Flask, jsonify, render_template, redirect, url_for, request
 from flask_cors import CORS
 from src.config import Config
 from src.quiz import db
 from src.database import DatabaseManager
 from src.quiz import Quiz, Question
+import json
+from src.quiz import Quiz, Question, User, Corps
 from src.routes import init_routes
 from src.humain import Corps
 
@@ -17,16 +18,9 @@ init_routes(app)
 
 @app.route('/act', methods=['GET'])
 def activities():
-    activities = [
-        {
-            'activity': 'activity 1',
-            'description': 'description 1'
-        },
-        {
-            'activity': 'activity 2',
-            'description': 'description 2'
-        }
-    ]
+    activities = dict()
+    with open('activities.json', 'r') as file:
+        activities = json.load(file)
     return render_template('activities.html', activities=activities)
 
 
