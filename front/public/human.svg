@@ -1,29 +1,231 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600">
-  <defs>
-    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#e6c9a8" />
-      <stop offset="100%" style="stop-color:#d4b292" />
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 300 600"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="human.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.8042345"
+     inkscape:cx="82.013872"
+     inkscape:cy="133.40397"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg24" />
+  <defs
+     id="defs10">
+    <linearGradient
+       id="linearGradient27"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#d4b292"
+         id="stop26" />
+      <stop
+         offset="100%"
+         style="stop-color:#c49d7c"
+         id="stop27" />
     </linearGradient>
-    <linearGradient id="muscleShading" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#d4b292" />
-      <stop offset="100%" style="stop-color:#c49d7c" />
+    <linearGradient
+       id="skinTone"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         style="stop-color:#e6c9a8"
+         id="stop1" />
+      <stop
+         offset="100%"
+         style="stop-color:#d4b292"
+         id="stop2" />
     </linearGradient>
-    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ff6b6b"/>
-      <stop offset="100%" style="stop-color:#cc0000"/>
+    <linearGradient
+       id="muscleShading"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#d4b292"
+         id="stop3" />
+      <stop
+         offset="100%"
+         style="stop-color:#c49d7c"
+         id="stop4" />
     </linearGradient>
-    <linearGradient id="lungGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffb3b3"/>
-      <stop offset="100%" style="stop-color:#ff8080"/>
+    <linearGradient
+       id="heartGradient"
+       x1="153.06804"
+       y1="171.07605"
+       x2="209.92842"
+       y2="227.93643"
+       gradientTransform="matrix(0.41626604,0,0,0.43052267,89.875951,119.6338)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         style="stop-color:#ff6b6b"
+         id="stop5" />
+      <stop
+         offset="100%"
+         style="stop-color:#cc0000"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="lungGradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#ffb3b3"
+         id="stop7" />
+      <stop
+         offset="100%"
+         style="stop-color:#ff8080"
+         id="stop8" />
     </linearGradient>
     <!-- Add ribcage gradient -->
-    <linearGradient id="ribGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#f0f0f0"/>
-      <stop offset="100%" style="stop-color:#e0e0e0"/>
+    <linearGradient
+       id="ribGradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         style="stop-color:#f0f0f0"
+         id="stop9" />
+      <stop
+         offset="100%"
+         style="stop-color:#e0e0e0"
+         id="stop10" />
     </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#lungGradient"
+       id="linearGradient24"
+       x1="288.52407"
+       y1="95.362402"
+       x2="349.92181"
+       y2="156.76015"
+       gradientTransform="matrix(0.52376557,0,0,0.84255888,-1.8031491,103.82119)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#lungGradient"
+       id="linearGradient25"
+       x1="229.09802"
+       y1="95.362402"
+       x2="290.49577"
+       y2="156.76015"
+       gradientTransform="matrix(0.52380798,0,0,0.83649026,-1.4785262,104.40035)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient27"
+       id="linearGradient26"
+       x1="279.27356"
+       y1="121.68416"
+       x2="355.11589"
+       y2="196.73929"
+       gradientTransform="matrix(0.58065959,0,0,1.4874932,20.135625,-6.1979171)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#skinTone"
+       id="linearGradient28"
+       x1="256.49741"
+       y1="238.9641"
+       x2="302.13235"
+       y2="238.9641"
+       gradientTransform="matrix(0.50367563,0,0,0.86917146,85.145135,69.264793)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient27"
+       id="linearGradient30"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.63556764,0,0,1.4869303,295.15981,-6.0179204)"
+       x1="279.27356"
+       y1="121.68416"
+       x2="355.11589"
+       y2="196.73929" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#skinTone"
+       id="linearGradient31"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.57540136,0,0,0.86798122,231.10901,69.178111)"
+       x1="256.49741"
+       y1="238.9641"
+       x2="302.13235"
+       y2="238.9641" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#muscleShading"
+       id="linearGradient32"
+       x1="189.79576"
+       y1="153.99326"
+       x2="296.8778"
+       y2="261.0753"
+       gradientTransform="matrix(0.35012914,0,0,1.6131624,35.952158,51.200366)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#muscleShading"
+       id="linearGradient33"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.36030872,0,0,1.6130706,266.56194,51.128308)"
+       x1="189.79576"
+       y1="153.99326"
+       x2="296.8778"
+       y2="261.0753" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#skinTone"
+       id="linearGradient34"
+       x1="108.05474"
+       y1="644.41646"
+       x2="158.20293"
+       y2="644.41646"
+       gradientTransform="matrix(0.88209594,0,0,0.36047225,59.706761,236.16446)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#skinTone"
+       id="linearGradient35"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.88209594,0,0,0.36047225,2.5610243,236.93451)"
+       x1="108.05474"
+       y1="644.41646"
+       x2="158.20293"
+       y2="644.41646" />
   </defs>
-  
-  <style>
+  <style
+     id="style10">
     .body-part, .organ {
       transition: all 0.3s;
       stroke: #4a4a4a;
@@ -51,130 +253,164 @@
       stroke-width: 0.5;
     }
   </style>
-
   <!-- Skeletal structure hint (ribcage) -->
-  <path class="ribs" d="M130 185 
-    C140 185, 160 185, 170 185
-    C180 200, 185 220, 185 240
-    C175 260, 165 270, 150 270
-    C135 270, 125 260, 115 240
-    C115 220, 120 200, 130 185" 
-    fill="url(#ribGradient)"/>
-
+  <path
+     class="ribs"
+     d="M130 185      C140 185, 160 185, 170 185     C180 200, 185 220, 185 240     C175 260, 165 270, 150 270     C135 270, 125 260, 115 240     C115 220, 120 200, 130 185"
+     fill="url(#ribGradient)"
+     id="path10" />
   <!-- Head (adjusted proportions) -->
-  <path class="body-part" d="M150 30 
-    C180 30, 195 60, 195 90 
-    C195 110, 190 120, 185 130
-    C180 140, 165 150, 150 150
-    C135 150, 120 140, 115 130
-    C110 120, 105 110, 105 90
-    C105 60, 120 30, 150 30" 
-    fill="url(#skinTone)"/>
-  <text class="label" x="200" y="90">Head</text>
-
+  <path
+     class="body-part"
+     d="m 150,30 c 30,0 45,30 45,60 0,20 -5,30 -10,40 -5,10 -20,20 -35,20 -15,0 -30,-10 -35,-20 -5,-10 -10,-20 -10,-40 0,-30 15,-60 45,-60"
+     fill="url(#skinTone)"
+     id="path11"
+     sodipodi:nodetypes="csssssc" />
   <!-- Neck (smoother transition) -->
-  <path class="body-part" d="M135 150 
-    C135 150, 150 148, 165 150
-    L162 170 
-    C162 170, 150 172, 138 170 Z" 
-    fill="url(#muscleShading)"/>
-  <text class="label" x="180" y="160">Neck</text>
-
+  <path
+     class="body-part"
+     d="m 134.07997,150.65716 c 0,0 -0.39516,-5.45069 1.77132,-3.33683 3.35861,3.27703 15.99158,2.66096 24.62551,1.46359 7.46484,-1.03524 4.08042,-2.00612 5.57466,-1.80687 l 2.18705,20.01168 3.39293,3.53076 3.77468,4.12188 c 0,0 -38.02364,4.23048 -50.02364,0 l 3.0807,-3.95383 3.95332,-2.90689 z"
+     fill="url(#muscleShading)"
+     id="path12"
+     sodipodi:nodetypes="csscccccccc" />
   <!-- Torso (adjusted transparency) -->
-  <path class="body-part" d="M120 175 
-    C120 175, 150 173, 180 175
-    C185 200, 190 250, 190 300
-    C160 310, 140 310, 110 300
-    C110 250, 115 200, 120 175" 
-    fill="url(#muscleShading)"
-    opacity="0.8"/>
-  <text class="label" x="200" y="230">Torso</text>
-
+  <path
+     class="body-part"
+     d="M120 175      C120 175, 150 173, 180 175     C185 200, 190 250, 190 300     C160 310, 140 310, 110 300     C110 250, 115 200, 120 175"
+     fill="url(#muscleShading)"
+     opacity="0.8"
+     id="path13" />
   <!-- Right Lung (adjusted position) -->
-  <path class="organ" d="M130 185
-    C115 195, 120 230, 120 250
-    C120 270, 125 290, 135 300
-    C142 305, 147 300, 150 295
-    C148 265, 148 225, 150 195
-    C145 188, 137 183, 130 185Z"
-    fill="url(#lungGradient)"/>
-  <text class="label" x="110" y="250">Right Lung</text>
-
+  <path
+     class="organ"
+     d="m 129.94941,184.57931 c -15.16477,4.334 -10.10985,19.50299 -10.10985,28.17098 0,8.668 5.05493,17.336 15.16477,21.67 7.07689,2.16699 12.1318,0 15.16475,-2.16701 -2.02196,-13.00198 -2.02196,-30.33798 0,-43.33997 -5.05491,-3.03381 -13.14279,-5.2008 -20.21967,-4.334 z"
+     fill="url(#lungGradient)"
+     id="path14"
+     style="fill:url(#linearGradient25)" />
   <!-- Left Lung (adjusted position) -->
-  <path class="organ" d="M170 185
-    C185 195, 180 230, 180 250
-    C180 270, 175 290, 165 300
-    C158 305, 153 300, 150 295
-    C152 265, 152 225, 150 195
-    C155 188, 163 183, 170 185Z"
-    fill="url(#lungGradient)"/>
-  <text class="label" x="180" y="250">Left Lung</text>
-
+  <path
+     class="organ"
+     d="m 170.05022,184.58184 c 15.16352,4.36544 10.10902,19.64448 10.10902,28.37536 0,8.73088 -5.05452,17.46176 -15.16353,21.8272 -7.07632,2.18272 -12.13083,0 -15.16354,-2.18272 2.02181,-13.09632 2.02181,-30.55809 0,-43.6544 5.05452,-3.05581 13.14173,-5.23853 20.21805,-4.36544 z"
+     fill="url(#lungGradient)"
+     id="path15"
+     style="fill:url(#linearGradient24)" />
   <!-- Heart (adjusted position and size) -->
-  <path class="organ" d="M150 215
-    C158 205, 166 205, 170 215
-    C174 225, 174 235, 170 245
-    C166 255, 158 265, 150 275
-    C142 265, 134 255, 130 245
-    C126 235, 126 225, 130 215
-    C134 205, 142 205, 150 215Z"
-    fill="url(#heartGradient)"/>
-  <text class="label" x="140" y="245">Heart</text>
-
+  <path
+     class="organ"
+     d="m 165.42751,196.13238 c 4.02943,-3.55808 8.05884,-3.55808 10.07355,0 2.0147,3.55807 2.0147,7.11614 0,10.67421 -2.01471,3.55808 -6.04412,7.11615 -10.07355,10.67423 -4.02942,-3.55808 -8.05883,-7.11615 -10.07355,-10.67423 -2.0147,-3.55807 -2.0147,-7.11614 0,-10.67421 2.01472,-3.55808 6.04413,-3.55808 10.07355,0 z"
+     fill="url(#heartGradient)"
+     id="path16"
+     style="fill:url(#heartGradient);fill-rule:nonzero" />
   <!-- Arms (improved shoulder area) -->
-  <path class="body-part" d="M110 180
-    C95 185, 90 190, 85 200
-    C75 220, 65 260, 60 280
-    C60 285, 65 290, 70 290
-    C80 290, 85 285, 90 280
-    C95 260, 105 220, 110 200Z" 
-    fill="url(#muscleShading)"/>
-  <path class="body-part" d="M190 180
-    C205 185, 210 190, 215 200
-    C225 220, 235 260, 240 280
-    C240 285, 235 290, 230 290
-    C220 290, 215 285, 210 280
-    C205 260, 195 220, 190 200Z" 
-    fill="url(#muscleShading)"/>
-
+  <path
+     class="body-part"
+     d="m 181.47976,174.38917 c 12.86079,5.03697 18.70702,10.81802 22.99396,20.89198 8.57386,20.1479 17.14773,60.44372 21.43466,80.59162 0,5.03697 -4.28693,10.07396 -8.57386,10.07396 -8.57387,0 -12.8608,-5.03699 -17.14774,-10.07396 -4.28692,-20.1479 -12.86079,-60.44372 -17.14772,-80.59162 -4.66229,-22.0113 -3.23902,-19.68656 -1.5593,-20.89198 z"
+     fill="url(#muscleShading)"
+     id="path18"
+     style="fill:url(#linearGradient26)"
+     sodipodi:nodetypes="cscsccc" />
+  <path
+     class="body-part"
+     d="m 118.55872,174.50084 c -14.07692,5.03506 -20.475973,10.81393 -25.168292,20.88407 -9.384617,20.14027 -18.769246,60.42085 -23.461554,80.56112 0,5.03507 4.692308,10.07015 9.384617,10.07015 9.384628,0 14.076937,-5.03508 18.769256,-10.07015 4.692303,-20.14027 14.076923,-60.42085 18.769233,-80.56112 5.10317,-22.00297 3.5453,-19.67911 1.70674,-20.88407 z"
+     fill="url(#muscleShading)"
+     id="path18-4"
+     style="fill:url(#linearGradient30);stroke:#4a4a4a;stroke-width:0.888689"
+     sodipodi:nodetypes="cscsccc" />
   <!-- Rest of body parts remain the same -->
   <!-- Legs -->
-  <path class="body-part" d="M110 300
-    C120 310, 135 310, 145 300
-    C150 350, 155 400, 150 500
-    C140 510, 120 510, 100 500
-    C95 400, 100 350, 110 300Z" 
-    fill="url(#muscleShading)"/>
-  <path class="body-part" d="M155 300
-    C165 310, 180 310, 190 300
-    C200 350, 205 400, 200 500
-    C180 510, 160 510, 150 500
-    C145 400, 150 350, 155 300Z" 
-    fill="url(#muscleShading)"/>
-
+  <path
+     class="body-part"
+     d="m 110.89468,299.90961 c 1.32603,1.61358 3.92194,1.78613 5.76825,2.42161 3.3604,1.15662 7.29345,0.99323 10.24168,2.44561 1.49208,0.73502 3.99246,0.1404 5.03824,1.28589 0.70921,0.77685 0.94591,-0.10498 1.6287,0.38891 0.74578,0.53949 0.9507,3.20262 1.16847,3.91827 3.40649,41.45154 6.81297,72.44277 3.40649,155.34585 -6.81297,8.29031 -20.43888,8.29031 -34.06478,0 -3.40648,-82.90308 0,-124.35462 6.81295,-165.80617 z"
+     fill="url(#muscleShading)"
+     id="path19"
+     sodipodi:nodetypes="cssssccccc"
+     style="fill:url(#linearGradient32)" />
+  <path
+     class="body-part"
+     d="m 189.44056,299.82341 c -1.36459,1.61349 -4.03597,1.78603 -5.93596,2.42147 -3.4581,1.15655 -7.5055,0.99317 -10.53944,2.44547 -1.53546,0.73498 -4.10854,0.14039 -5.18472,1.28582 -0.72983,0.7768 -0.97342,-0.10498 -1.67606,0.38888 -0.76746,0.53946 -0.97834,3.20244 -1.20244,3.91805 -3.50553,41.44918 -7.01105,72.43865 -3.50553,155.33701 7.01105,8.28984 21.03312,8.28984 35.05517,0 3.50552,-82.89836 0,-124.34754 -7.01102,-165.79673 z"
+     fill="url(#muscleShading)"
+     id="path19-5"
+     sodipodi:nodetypes="cssssccccc"
+     style="fill:url(#linearGradient33);stroke:#4a4a4a;stroke-width:0.762367" />
   <!-- Hands and feet -->
-  <path class="body-part" d="M60 280
-    C55 285, 50 290, 45 300
-    C40 310, 42 320, 45 325
-    C50 330, 60 335, 70 330
-    C75 325, 80 315, 80 310Z" 
-    fill="url(#skinTone)"/>
-  <path class="body-part" d="M240 280
-    C245 285, 250 290, 255 300
-    C260 310, 258 320, 255 325
-    C250 330, 240 335, 230 330
-    C225 325, 220 315, 220 310Z" 
-    fill="url(#skinTone)"/>
-  <path class="body-part" d="M100 500
-    C110 510, 140 510, 150 500
-    C155 510, 160 520, 160 530
-    C150 540, 110 540, 100 530
-    C95 520, 95 510, 100 500Z" 
-    fill="url(#skinTone)"/>
-  <path class="body-part" d="M150 500
-    C160 510, 190 510, 200 500
-    C205 510, 205 520, 200 530
-    C190 540, 150 540, 140 530
-    C140 520, 145 510, 150 500Z" 
-    fill="url(#skinTone)"/>
+  <path
+     class="body-part"
+     d="m 226.40235,277.52919 c 2.94286,3.71901 4.49804,9.50975 4.75417,17.50468 0.10855,3.38831 -0.62339,5.64971 -0.88929,6.79554 -0.49488,2.13251 -0.72222,1.23153 -1.87079,3.65068 -4.91435,0.69606 -10.27434,4.80936 -13.66284,0.82749 -3.46859,-3.45613 -11.52957,-10.93152 -11.52957,-14.65052 -3.05146,-13.05668 -4.07879,-14.6078 -2.76484,-16.02045 3.21753,-3.45921 17.19076,12.9557 25.96316,1.89258 z"
+     fill="url(#skinTone)"
+     id="path22"
+     sodipodi:nodetypes="csscccsc"
+     style="fill:url(#linearGradient28)" />
+  <path
+     class="body-part"
+     d="m 161.40702,466.61718 c 1.08947,0.74205 3.61942,1.71807 4.70331,2.6783 2.20574,1.95409 5.76918,1.81859 9.4845,1.79602 5.88756,-0.0358 12.14703,-0.92294 16.55007,-2.43069 1.73753,-0.595 2.70055,-3.38451 3.9508,-2.3065 -0.0947,1.37572 0.16657,1.74788 0.12492,2.60913 -0.11189,2.3136 -0.9114,5.19145 -1.14146,7.22245 -0.38008,3.35547 -1.23038,4.53175 -3.05786,7.02117 -6.83259,4.65374 -29.82569,4.25944 -36.65827,-0.3943 0,-4.65375 2.6277,-11.54183 6.04399,-16.19558 z"
+     fill="url(#skinTone)"
+     id="path24"
+     style="fill:url(#linearGradient34)"
+     sodipodi:nodetypes="cssscssccc" />
+  <path
+     class="body-part"
+     d="m 104.39271,466.20434 c 1.08947,0.74205 3.20392,2.07196 4.57188,2.54687 2.60004,0.90263 5.24345,2.34432 9.4845,3.11034 5.79392,1.04651 12.14703,-1.71153 16.55007,-3.21928 1.73753,-0.595 2.17482,-3.77881 3.42507,-2.7008 -0.0947,1.37572 0.6923,2.93077 0.65065,3.79202 -0.11189,2.3136 -0.9114,5.19145 -1.14146,7.22245 -0.38008,3.35547 -1.23038,4.53175 -3.05786,7.02117 -6.83259,4.65374 -29.82569,4.25944 -36.658267,-0.3943 0,-4.65375 2.759127,-12.72472 6.175417,-17.37847 z"
+     fill="url(#skinTone)"
+     id="path24-1"
+     style="fill:url(#linearGradient35);stroke:#4a4a4a;stroke-width:0.563889"
+     sodipodi:nodetypes="cssscssccc" />
+  <path
+     class="body-part"
+     d="m 69.736109,277.15732 c -3.361937,3.71392 -5.138581,9.49672 -5.431186,17.48071 -0.124008,3.38367 0.712164,5.64197 1.015929,6.78623 0.565353,2.12959 0.825068,1.22984 2.1372,3.64569 5.614175,0.6951 11.737453,4.80277 15.608491,0.82635 3.962533,-3.4514 13.171435,-10.91655 13.171435,-14.63046 3.486002,-13.0388 4.659632,-14.58779 3.158566,-15.99851 -3.675722,-3.45447 -19.638805,12.93796 -29.660435,1.88999 z"
+     fill="url(#skinTone)"
+     id="path22-2"
+     sodipodi:nodetypes="csscccsc"
+     style="fill:url(#linearGradient31);stroke:#4a4a4a;stroke-width:0.706709" />
+  <ellipse
+     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.542241;stroke-opacity:1"
+     id="path36-2"
+     ry="7.4784956"
+     rx="4.3691988"
+     cy="-132.79837"
+     cx="74.973976"
+     transform="rotate(89.478344)" />
+  <ellipse
+     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.542241;stroke-opacity:1"
+     id="path36"
+     ry="4.1322246"
+     rx="3.8534138"
+     cy="73.623451"
+     cx="133.42532" />
+  <ellipse
+     style="fill:none;fill-rule:nonzero;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
+     id="path37"
+     ry="3.2992566"
+     rx="0.25160596"
+     cy="73.535049"
+     cx="133.47083" />
+  <ellipse
+     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.542241;stroke-opacity:1"
+     id="path36-2-4"
+     ry="7.4784956"
+     rx="4.3691988"
+     cy="-165.96411"
+     cx="75.395432"
+     transform="rotate(89.478344)" />
+  <ellipse
+     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.542241;stroke-opacity:1"
+     id="path36-23"
+     ry="4.1322246"
+     rx="3.8534138"
+     cy="73.742928"
+     cx="166.59352" />
+  <ellipse
+     style="fill:none;fill-rule:nonzero;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
+     id="path37-2"
+     ry="3.2992566"
+     rx="0.25160596"
+     cy="73.654526"
+     cx="166.63902" />
+  <path
+     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
+     d="m 133.27254,119.86643 c 28.65228,0.26286 28.38942,0.26286 28.38942,0.26286 l -12.61752,15.50904 z"
+     id="path38" />
+  <path
+     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
+     d="m 147.20439,86.745442 -2.62865,14.720438 h 7.09735 l -2.36578,-14.457573 2.36578,14.194713 -7.09735,-0.26287 z"
+     id="path39" />
 </svg>
