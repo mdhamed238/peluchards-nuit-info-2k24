@@ -1,55 +1,55 @@
 # app/routes.py
 from flask import jsonify, request
 from src.quiz import Quiz, Question, Option, db
-from src.user import Utilisateur
-from src.humain import Corps, Parrallele
+from src.user import User
+# from src.humain import Corps, Parrallele
 def init_routes(app):
-    @app.route('/corps/')
-    def parties_du_corps():
-        parties_du_corps = Corps.query.all()
-        return jsonify({
-            'corps': [{
-                '_id': corps._id,
-            }]
-        })
-    @app.route("/corps/<int:id>", methods=['GET', 'POST'])
-    def partie_corps(id):
-        if request.method = 'POST':
-            data = request.get_json()
-            id_user = session.get('user_id')
-            try:
-                parrallele = Parralle(
-                    content=data['content'],
-                    utilisateur=Utilisateur.query.filter_by(id=id_user).first()
-                )
-                db.session.add(parrallele)
-                db.session.commit()
+    # @app.route('/corps/')
+    # def parties_du_corps():
+    #     # parties_du_corps = Corps.query.all()
+    #     return jsonify({
+    #         'corps': [{
+    #             '_id': corps._id,
+    #         }]
+    #     })
+    # @app.route("/corps/<int:id>", methods=['GET', 'POST'])
+    # def partie_corps(id):
+    #     if request.method = 'POST':
+    #         data = request.get_json()
+    #         id_user = session.get('user_id')
+    #         try:
+    #             parrallele = Parralle(
+    #                 content=data['content'],
+    #                 utilisateur=Utilisateur.query.filter_by(id=id_user).first()
+    #             )
+    #             db.session.add(parrallele)
+    #             db.session.commit()
 
-                return jsonify({
-                    'message': 'Quiz created successfully',
-                    'quiz_id': quiz._id
-                }), 201
+    #             return jsonify({
+    #                 'message': 'Quiz created successfully',
+    #                 'quiz_id': quiz._id
+    #             }), 201
 
-            except KeyError as e:
-                db.session.rollback()
-                return jsonify({
-                    'error': f'Missing required field: {str(e)}'
-                }), 400
-            except Exception as e:
-                db.session.rollback()
-                return jsonify({
-                    'error': f'Error creating quiz: {str(e)}'
-                }), 500
+    #         except KeyError as e:
+    #             db.session.rollback()
+    #             return jsonify({
+    #                 'error': f'Missing required field: {str(e)}'
+    #             }), 400
+    #         except Exception as e:
+    #             db.session.rollback()
+    #             return jsonify({
+    #                 'error': f'Error creating quiz: {str(e)}'
+    #             }), 500
 
-        else:
-        parralleles = ParralleleUtilsateur.query.all()
-        nom_partie= ParralleleUtilisateur.query.filter_by(attribut=partie) # possible car unique
-        return jsonify({
-            'partie_du_corps': nom_partie
-            'parrallele':[{
-                'id_p' : parrallele.id,
-            } for parrallele in parralleles ]
-        })
+    #     else:
+    #     parralleles = ParralleleUtilsateur.query.all()
+    #     nom_partie= ParralleleUtilisateur.query.filter_by(attribut=partie) # possible car unique
+    #     return jsonify({
+    #         'partie_du_corps': nom_partie
+    #         'parrallele':[{
+    #             'id_p' : parrallele.id,
+    #         } for parrallele in parralleles ]
+    #     })
 
 
     # Get all quizzes
@@ -314,3 +314,71 @@ def init_routes(app):
             'username': user.username,
             'editor': user.editor
         }), 200
+        
+    @app.route('/user/all', methods=['GET'])
+    def get_all_users():
+        """
+        Get all users (requires editor privileges)
+        """
+        try:
+            # Get all users
+            users = User.query.all()
+            
+            # Format user data
+            users_data = [{
+                'id': user.id,
+                'username': user.username,
+                'editor': user.editor
+            } for user in users]
+            
+            return jsonify({
+                'users': users_data,
+                'total': len(users_data)
+            }), 200
+            
+        except Exception as e:
+            db.session.rollback()
+            return jsonify({
+                'error': f'Error fetching users: {str(e)}'
+            }), 500
+            
+    @app.route('/user/update-editor', methods=['POST'])
+    def update_user_editor():
+        """
+        Update user's editor status (requires editor privileges)
+        """
+        try:
+            data = request.get_json()
+            user_id = data.get('user_id')
+            editor_status = data.get('editor')
+            
+            if user_id is None or editor_status is None:
+                return jsonify({
+                    'error': 'Missing required fields'
+                }), 400
+                
+            # Get the user to update
+            user = User.query.get(user_id)
+            if not user:
+                return jsonify({
+                    'error': 'User not found'
+                }), 404
+                
+            # Update editor status
+            user.editor = editor_status
+            db.session.commit()
+            
+            return jsonify({
+                'message': 'User updated successfully',
+                'user': {
+                    'id': user.id,
+                    'username': user.username,
+                    'editor': user.editor
+                }
+            }), 200
+            
+        except Exception as e:
+            db.session.rollback()
+            return jsonify({
+                'error': f'Error updating user: {str(e)}'
+            }), 500

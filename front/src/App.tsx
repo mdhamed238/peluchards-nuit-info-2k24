@@ -18,6 +18,7 @@ import Act from "./pages/Act";
 import { AuthProvider } from "./store/AuthContext";
 import { LoginForm } from "./pages/auth/LoginForm";
 import { RegisterForm } from "./pages/auth/RegisterForm";
+import { UserManagement } from "./components/UserManagement";
 
 // Navigation component
 const Navigation: React.FC = () => {
@@ -49,6 +50,19 @@ const Navigation: React.FC = () => {
           </Link>
         ))}
       </div>
+
+      {user?.editor && (
+        <Link
+          to='/users'
+          className={`text-base font-medium transition-colors ${
+            isActive("/users")
+              ? "text-blue-600"
+              : "text-gray-600 hover:text-gray-900"
+          }`}
+        >
+          Users
+        </Link>
+      )}
 
       <div className='flex items-center space-x-4 ml-6 border-l pl-6'>
         {user ? (
@@ -130,6 +144,7 @@ function App() {
             <Route path='/edit/:id' element={<EditQuiz />} />
             <Route path='/login' element={<LoginForm />} />
             <Route path='/register' element={<RegisterForm />} />
+            <Route path='/users' element={<UserManagement />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </Layout>
