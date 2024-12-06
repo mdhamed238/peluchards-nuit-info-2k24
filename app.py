@@ -22,7 +22,6 @@ def activities():
         activities = json.load(file)
     return render_template('activities.html', activities=activities)
 
-
 # @app.route('share/', methods=['GET'])
 # def index():
 #     lst_parties_corps = db.all(Corps)

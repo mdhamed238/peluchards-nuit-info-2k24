@@ -1,7 +1,7 @@
 # app/routes.py
-from flask import jsonify, request
+from flask import jsonify, request, session, redirect
 from src.quiz import Quiz, Question, Option, db
-
+from src.user import User
 def init_routes(app):
     # Get all quizzes
     @app.route('/api/quizzes', methods=['GET'])
@@ -158,3 +158,74 @@ def init_routes(app):
             return jsonify({
                 'error': f'Error deleting quiz: {str(e)}'
             }), 500
+
+    @app.route('/user/login', methods=['POST'])
+    def login_user():
+        data = request.get_json()
+        email = data.get('email')
+        password = data.get('password')
+        user = User.query.filter_by(email=email).first()
+        if user and user.check_password_verification(password):
+            session['user_id'] = user.id
+            return jsonify({
+                'message': 'Login successful',
+                'user_id': user.id,
+                'username': user.username,
+                'email': user.email,
+                'editor': user.editor
+            })
+        else:
+            return jsonify({
+                'error': 'Invalid email or password'
+            }), 401
+        
+    @app.route('/user/register', methods=['POST'])
+    def register_user():
+        data = request.get_json()
+        username = data.get('username')
+        email = data.get('email')
+        password = data.get('password')
+        
+        try:
+            user = User(
+                username=username,
+                email=email,
+                password=password,
+                editor=False
+            )
+            db.session.add(user)
+            db.session.commit()
+            session['user_id'] = user.id
+            return jsonify({
+                'message': 'User registered successfully',
+                'user_id': user.id,
+                'username': user.username,
+                'email': user.email,
+                'editor': user.editor
+            }), 201
+        except Exception as e:
+            db.session.rollback()
+            return jsonify({
+                'error': f'Error registering user: {str(e)}'
+            }), 500
+
+    @app.route('/user/logout', methods=['GET'])
+    def logout_user():
+        session.pop('user_id', None)
+        return redirect('/')
+    
+    @app.route('/user', methods=['GET'])
+    def get_user():
+        user_id = session.get('user_id')
+        if user_id:
+            user = User.query.get(user_id)
+            return jsonify({
+                'user_id': user.id,
+                'username': user.username,
+                'email': user.email,
+                'editor': user.editor
+            })
+        else:
+            return jsonify({
+                'error': 'User not logged in'
+            }), 401
