@@ -18,14 +18,3 @@ class Parrallele(db.Model):
     __tablename__ = 'html_content'
     title = db.Column(String(255))  # Title of the content
     content = db.Column(Text)
-
-
-class Option(db.Model):
-    _id = db.Column(db.Integer, primary_key=True)
-    question_id = db.Column(
-            db.Integer,
-            db.ForeignKey('question._id'),
-            nullable=False
-    )
-    option_text = db.Column(db.Text, nullable=False)
-    is_correct = db.Column(db.Boolean, default=False)

@@ -53,7 +53,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                   getOptionColor(option.is_correct, option._id)
                 )}
               >
-                {option.text}
+                {option.option_text}
               </Label>
             </div>
           ))}
