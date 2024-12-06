@@ -150,3 +150,26 @@ a.link-timeline {
     text-decoration: underline;
     color: white;
 }
+
+@media screen and (min-width: 500px) {
+    div.scroll-wrapper {
+        gap: 2rem;
+        transform: translate(0, -30%);
+    }
+    img#boat {
+        width: 50%;
+        top: 35%;
+        animation: boat 2.5s linear infinite;
+    }
+    @keyframes boat {
+        0% {
+            transform: translate(-50%, -50%) rotate(5deg) translateY(-2vh);
+        }
+        25% {
+            transform: translate(-50%, -50%) rotate(-5deg) translateY(1vh);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(5deg) translateY(-2vh);
+        }
+    }
+}
