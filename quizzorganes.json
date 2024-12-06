@@ -1,63 +1,61 @@
 {
     "question 1" : {
         "quizz1" : "Où se trouve l'hypotalamus ?" ,
-        "rep" : [{"1" : "Dans le cerveau"} {"2" : "Dans la cuisse"} {"3" : "Dans le coeur"} {"4" : "Dans l'avant bras"}],
-        "vrai" : "1",
+        "rep" : [{"1" : "Dans le cerveau"}, {"2" : "Dans la cuisse"}, {"3" : "Dans le coeur"}, {"4" : "Dans l'avant bras"}],
+        "vrai" : "1"
     },
 
     "question 2" : {
         "quizz2" : "Laquelle de ces parties du cerveau n'existe pas ? " ,
-        "rep" : [{"1" : "le néocortex préfrontal"} {"2" : "les territoires reptiliens"} {"3" : "le cortex méningiques"} {"4" : "les territoires paléo limbiques"}],
-        "vrai" : "3",
+        "rep" : [{"1" : "le néocortex préfrontal"}, {"2" : "les territoires reptiliens"}, {"3" : "le cortex méningiques"}, {"4" : "les territoires paléo limbiques"}],
+        "vrai" : "3"
     },
 
     "question 3" : {
         "quizz3" : "Sachant que le poumon droit contient compte 3 lobes, combien en contient le poumon droit ?" ,
-        "rep" : [{"1" : "1"} {"2" : "2"} {"3" : "3"} {"4" : "4"}],
-        "vrai" : "2",
+        "rep" : [{"1" : "1"}, {"2" : "2"}, {"3" : "3"}, {"4" : "4"}],
+        "vrai" : "2"
     },
 
     "question 4" : {
         "quizz4" : "Combien de litres de sang le cœur pompe-t-il par minutes ?" ,
-        "rep" : [{"1" : "1"} {"2" : "3"} {"3" : "5"} {"4" : "7"}],
-        "vrai" : "3",
+        "rep" : [{"1" : "1"}, {"2" : "3"}, {"3" : "5"}, {"4" : "7"}],
+        "vrai" : "3"
     },
 
     "question 5" : {
         "quizz5" : "Quel pourcentage du poids humain l'eau représente ?" ,
-        "rep" : [{"1" : "30 à 35%"} {"2" : "40 à 45%"} {"3" : "50 à 55%"} {"4" : "60 à 65%"}],
-        "vrai" : "4",
+        "rep" : [{"1" : "30 à 35%"}, {"2" : "40 à 45%"}, {"3" : "50 à 55%"}, {"4" : "60 à 65%"}],
+        "vrai" : "4"
     },
     
     "question 6" : {
         "quizz6" : "Ou se situe l'intestin grêle dans la chaîne de la digestion ?" ,
-        "rep" : [{"1" : "Après l'estomac"} {"2" : "Après le colon"} {"3" : "Après les reins"} {"4" : "Après la vessie"}],
-        "vrai" : "1",
+        "rep" : [{"1" : "Après l'estomac"}, {"2" : "Après le colon"}, {"3" : "Après les reins"}, {"4" : "Après la vessie"}],
+        "vrai" : "1"
     },
 
     "question 7" : {
         "quizz7" : "Lequel de ces mots ne désigne pas de vaisseau sanguin" ,
-        "rep" : [{"1" : "Les artérioles"} {"2" : "Les capillaires"} {"3" : "Les veinules"} {"4" : "Aucun des 3"}],
-        "vrai" : "4",
+        "rep" : [{"1" : "Les artérioles"}, {"2" : "Les capillaires"}, {"3" : "Les veinules"}, {"4" : "Aucun des 3"}],
+        "vrai" : "4"
     },
 
     "question 8" : {
         "quizz8" : "Laquelle de ces propositions est fausse:" ,
-        "rep" : [{"1" : "l'astragale se trouve dans le rein"} {"2" : "Le rein élimine les déchets produits par l'organism"} {"3" : "Nous avons généralement 2 reins."} {"4" : "Le rein produit des hormones"}],
-        "vrai" : "1",
+        "rep" : [{"1" : "l'astragale se trouve dans le rein"}, {"2" : "Le rein élimine les déchets produits par l'organism"}, {"3" : "Nous avons généralement 2 reins."}, {"4" : "Le rein produit des hormones"}],
+        "vrai" : "1"
     },
 
     "question 9" : {
         "quizz9" : "L'eau est présent dans la composition de la salive:" ,
-        "rep" : [{"1" : "à 11%"} {"2" : "à 33%"} {"3" : "à 66%"} {"4" : "à 99%"}],
-        "vrai" : "4",
+        "rep" : [{"1" : "à 11%"}, {"2" : "à 33%"}, {"3" : "à 66%"}, {"4" : "à 99%"}],
+        "vrai" : "4"
     },
 
     "question 10" : {
         "quizz10" : "L'hyperhidrose primaire est un problème en rapport avec : " ,
-        "rep" : [{"1" : "Le sang"} {"2" : "L'urine"} {"3" : "La salive"} {"4" : "La transpiration"}],
-        "vrai" : "4",
-    },
-
-
+        "rep" : [{"1" : "Le sang"}, {"2" : "L'urine"}, {"3" : "La salive"}, {"4" : "La transpiration"}],
+        "vrai" : "4"
+    }
 }
