@@ -5,6 +5,7 @@ from src.config import Config
 from src.quiz import db
 from src.database import DatabaseManager
 from src.quiz import Quiz, Question
+import json
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -57,16 +58,9 @@ def get_quiz(quiz_id):
 
 @app.route('/act', methods=['GET'])
 def activities():
-    activities = [
-        {
-            'activity': 'activity 1',
-            'description': 'description 1'
-        },
-        {
-            'activity': 'activity 2',
-            'description': 'description 2'
-        }
-    ]
+    activities = dict()
+    with open('activities.json', 'r') as file:
+        activities = json.load(file)
     return render_template('activities.html', activities=activities)
 
 if __name__ == '__main__':

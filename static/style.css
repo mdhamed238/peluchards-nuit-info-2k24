@@ -2,6 +2,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 main {
     flex:1;
@@ -9,6 +11,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 div#wave-container {
     height: 80vh;
@@ -75,7 +78,8 @@ img#wave-3{
 
 img#boat {
     position: relative;
-    top: 19%;
+    height: 50%;
+    top: 18%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -85,15 +89,56 @@ img#boat {
 
 @keyframes boat {
     0% {
-        transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+        transform: translate(-50%, -50%) rotate(10deg) translateY(-2vh);
     }
     25% {
-        transform: translate(-50%, -50%) rotate(20deg) translateY(-2vh);
-    }
-    75% {
-        transform: translate(-50%, -50%) rotate(-20deg) translateY(2vh);
+        transform: translate(-50%, -50%) rotate(-10deg) translateY(1vh);
     }
     100% {
-        transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+        transform: translate(-50%, -50%) rotate(10deg) translateY(-2vh);
     }
+    /*100% {
+        transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+    }*/
+}
+
+div.scroll-wrapper {
+    position: relative;
+    top : -360%;
+    width: 100%; /* Largeur du conteneur parent */
+    overflow-x: auto; /* Active le défilement horizontal */
+    overflow-y: hidden; /* Pas de défilement vertical */
+    white-space: nowrap; /* Évite le retour à la ligne des éléments */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+div.scroll-wrapper::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+div#timeline {
+    display: flex;
+    gap: 1rem; /* Espacement entre les éléments */
+    padding: 1rem;
+    box-sizing: border-box;
+    width: max-content; /* Force la largeur à s'adapter au contenu */
+}
+
+div.timeline-item {
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    color:white;
+    border: 3px solid white;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+a.link-timeline {
+    text-decoration: underline;
+    color: white;
 }

@@ -11,15 +11,34 @@
             <h1>Activitées</h1>
         </header>
         <main>
-            <img src="/static/images/boat.png" id="boat">
+            
+            <img src="/static/images/boatv2.png" id="boat">
             
             <div id="wave-container">
                 <img id="wave-front" src="/static/images/wave-front.png">
                 <img id="wave-1" src="/static/images/wave-1.png">
                 <img id="wave-2" src="/static/images/wave-2.png">
                 <img id="wave-3" src="/static/images/wave-3.png">
-                <div id="bottom-ocean"></div>
+                <div class="scroll-wrapper" id="scrollable-container">
+                    <div id="timeline">
+                        {% for activity in activities %}
+                            <div class="timeline-item">
+                                <h2>{{activity['name']}}</h2>
+                                <a href="{{activity['link']}}" class="link-timeline">En savoir plus</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </main>
+        <script>
+            const scrollableContainer = document.getElementById('scrollable-container');
+
+            // Ajoute un gestionnaire d'événement pour le défilement avec la molette
+            scrollableContainer.addEventListener('wheel', (event) => {
+                event.preventDefault(); // Empêche le défilement vertical par défaut
+                scrollableContainer.scrollLeft += event.deltaY; // Scrolle horizontalement
+            });
+        </script>
     </body>
 </html>
