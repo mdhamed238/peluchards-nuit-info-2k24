@@ -12,6 +12,10 @@ main {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background-image: url('/static/images/sky.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    /*z-index: -100;*/
 }
 div#wave-container {
     height: 80vh;
@@ -21,12 +25,15 @@ div#wave-container {
 }
 
 img#wave-front {
+    position: relative;
+    top: 0;
+    left: 0;
     height: 80vh;
     width: 400%;
     padding:0;
     margin:0;
     filter: brightness(0.9) contrast(1.5) saturate(1) blur(1px) ;
-    
+    z-index: 9;
     opacity: 0.95;
     animation: wave 5s linear infinite;
 }
@@ -35,7 +42,7 @@ img#wave-1{
     position: relative;
     top: -100%;
     left: 0;
-    z-index: -2;
+    z-index: 3;
     height: 80vh;
     width: 400%;
     padding:0;
@@ -47,7 +54,7 @@ img#wave-2{
     position: relative;
     top: -200%;
     left: 0;
-    z-index: -2;
+    z-index: 2;
     height: 80vh;
     width: 400%;
     padding:0;
@@ -59,7 +66,7 @@ img#wave-3{
     position: relative;
     top: -300%;
     left: 0;
-    z-index: -2;
+    z-index: 1;
     height: 80vh;
     width: 400%;
     padding:0;
@@ -78,11 +85,11 @@ img#wave-3{
 
 img#boat {
     position: relative;
-    height: 50%;
+    width: 70%;
     top: 18%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 4;
     animation: boat 2.5s linear infinite;
 
 }
@@ -111,6 +118,7 @@ div.scroll-wrapper {
     white-space: nowrap; /* Évite le retour à la ligne des éléments */
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    z-index: 10;
 }
 div.scroll-wrapper::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and Opera */

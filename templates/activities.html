@@ -7,11 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <header>
-            <h1>Activitées</h1>
-        </header>
+        
         <main>
-            
+            <h1>Activités</h1>
             <img src="/static/images/boatv2.png" id="boat">
             
             <div id="wave-container">
@@ -31,11 +29,15 @@
                 </div>
             </div>
         </main>
-        <script>
+        <script defer>
             const scrollableContainer = document.getElementById('scrollable-container');
-
+            console.log(scrollableContainer);
             // Ajoute un gestionnaire d'événement pour le défilement avec la molette
             scrollableContainer.addEventListener('wheel', (event) => {
+                console.log(event.deltaY);
+                console.log(scrollableContainer.scrollLeft);
+                console.log(scrollableContainer);
+
                 event.preventDefault(); // Empêche le défilement vertical par défaut
                 scrollableContainer.scrollLeft += event.deltaY; // Scrolle horizontalement
             });
