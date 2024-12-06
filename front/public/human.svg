@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600">
+  <defs>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e6c9a8" />
+      <stop offset="100%" style="stop-color:#d4b292" />
+    </linearGradient>
+    <linearGradient id="muscleShading" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4b292" />
+      <stop offset="100%" style="stop-color:#c49d7c" />
+    </linearGradient>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b"/>
+      <stop offset="100%" style="stop-color:#cc0000"/>
+    </linearGradient>
+    <linearGradient id="lungGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffb3b3"/>
+      <stop offset="100%" style="stop-color:#ff8080"/>
+    </linearGradient>
+    <!-- Add ribcage gradient -->
+    <linearGradient id="ribGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0f0f0"/>
+      <stop offset="100%" style="stop-color:#e0e0e0"/>
+    </linearGradient>
+  </defs>
+  
+  <style>
+    .body-part, .organ {
+      transition: all 0.3s;
+      stroke: #4a4a4a;
+      stroke-width: 1;
+    }
+    .body-part:hover, .organ:hover {
+      filter: brightness(1.2);
+      cursor: pointer;
+    }
+    .label {
+      font-family: Arial;
+      font-size: 12px;
+      fill: #333;
+      visibility: hidden;
+    }
+    .body-part:hover + .label, .organ:hover + .label {
+      visibility: visible;
+    }
+    .organ {
+      opacity: 0.9;
+    }
+    .ribs {
+      opacity: 0.3;
+      stroke: #888;
+      stroke-width: 0.5;
+    }
+  </style>
+
+  <!-- Skeletal structure hint (ribcage) -->
+  <path class="ribs" d="M130 185 
+    C140 185, 160 185, 170 185
+    C180 200, 185 220, 185 240
+    C175 260, 165 270, 150 270
+    C135 270, 125 260, 115 240
+    C115 220, 120 200, 130 185" 
+    fill="url(#ribGradient)"/>
+
+  <!-- Head (adjusted proportions) -->
+  <path class="body-part" d="M150 30 
+    C180 30, 195 60, 195 90 
+    C195 110, 190 120, 185 130
+    C180 140, 165 150, 150 150
+    C135 150, 120 140, 115 130
+    C110 120, 105 110, 105 90
+    C105 60, 120 30, 150 30" 
+    fill="url(#skinTone)"/>
+  <text class="label" x="200" y="90">Head</text>
+
+  <!-- Neck (smoother transition) -->
+  <path class="body-part" d="M135 150 
+    C135 150, 150 148, 165 150
+    L162 170 
+    C162 170, 150 172, 138 170 Z" 
+    fill="url(#muscleShading)"/>
+  <text class="label" x="180" y="160">Neck</text>
+
+  <!-- Torso (adjusted transparency) -->
+  <path class="body-part" d="M120 175 
+    C120 175, 150 173, 180 175
+    C185 200, 190 250, 190 300
+    C160 310, 140 310, 110 300
+    C110 250, 115 200, 120 175" 
+    fill="url(#muscleShading)"
+    opacity="0.8"/>
+  <text class="label" x="200" y="230">Torso</text>
+
+  <!-- Right Lung (adjusted position) -->
+  <path class="organ" d="M130 185
+    C115 195, 120 230, 120 250
+    C120 270, 125 290, 135 300
+    C142 305, 147 300, 150 295
+    C148 265, 148 225, 150 195
+    C145 188, 137 183, 130 185Z"
+    fill="url(#lungGradient)"/>
+  <text class="label" x="110" y="250">Right Lung</text>
+
+  <!-- Left Lung (adjusted position) -->
+  <path class="organ" d="M170 185
+    C185 195, 180 230, 180 250
+    C180 270, 175 290, 165 300
+    C158 305, 153 300, 150 295
+    C152 265, 152 225, 150 195
+    C155 188, 163 183, 170 185Z"
+    fill="url(#lungGradient)"/>
+  <text class="label" x="180" y="250">Left Lung</text>
+
+  <!-- Heart (adjusted position and size) -->
+  <path class="organ" d="M150 215
+    C158 205, 166 205, 170 215
+    C174 225, 174 235, 170 245
+    C166 255, 158 265, 150 275
+    C142 265, 134 255, 130 245
+    C126 235, 126 225, 130 215
+    C134 205, 142 205, 150 215Z"
+    fill="url(#heartGradient)"/>
+  <text class="label" x="140" y="245">Heart</text>
+
+  <!-- Arms (improved shoulder area) -->
+  <path class="body-part" d="M110 180
+    C95 185, 90 190, 85 200
+    C75 220, 65 260, 60 280
+    C60 285, 65 290, 70 290
+    C80 290, 85 285, 90 280
+    C95 260, 105 220, 110 200Z" 
+    fill="url(#muscleShading)"/>
+  <path class="body-part" d="M190 180
+    C205 185, 210 190, 215 200
+    C225 220, 235 260, 240 280
+    C240 285, 235 290, 230 290
+    C220 290, 215 285, 210 280
+    C205 260, 195 220, 190 200Z" 
+    fill="url(#muscleShading)"/>
+
+  <!-- Rest of body parts remain the same -->
+  <!-- Legs -->
+  <path class="body-part" d="M110 300
+    C120 310, 135 310, 145 300
+    C150 350, 155 400, 150 500
+    C140 510, 120 510, 100 500
+    C95 400, 100 350, 110 300Z" 
+    fill="url(#muscleShading)"/>
+  <path class="body-part" d="M155 300
+    C165 310, 180 310, 190 300
+    C200 350, 205 400, 200 500
+    C180 510, 160 510, 150 500
+    C145 400, 150 350, 155 300Z" 
+    fill="url(#muscleShading)"/>
+
+  <!-- Hands and feet -->
+  <path class="body-part" d="M60 280
+    C55 285, 50 290, 45 300
+    C40 310, 42 320, 45 325
+    C50 330, 60 335, 70 330
+    C75 325, 80 315, 80 310Z" 
+    fill="url(#skinTone)"/>
+  <path class="body-part" d="M240 280
+    C245 285, 250 290, 255 300
+    C260 310, 258 320, 255 325
+    C250 330, 240 335, 230 330
+    C225 325, 220 315, 220 310Z" 
+    fill="url(#skinTone)"/>
+  <path class="body-part" d="M100 500
+    C110 510, 140 510, 150 500
+    C155 510, 160 520, 160 530
+    C150 540, 110 540, 100 530
+    C95 520, 95 510, 100 500Z" 
+    fill="url(#skinTone)"/>
+  <path class="body-part" d="M150 500
+    C160 510, 190 510, 200 500
+    C205 510, 205 520, 200 530
+    C190 540, 150 540, 140 530
+    C140 520, 145 510, 150 500Z" 
+    fill="url(#skinTone)"/>
+</svg>
