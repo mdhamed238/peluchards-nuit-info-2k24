@@ -1,0 +1,2 @@
+from .ocean_quiz import ocean_quiz_data
+from .human_body_quiz import human_body_quiz_data

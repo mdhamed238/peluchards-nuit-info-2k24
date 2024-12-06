@@ -90,7 +90,7 @@ export const CreateQuiz = () => {
         throw new Error("Failed to create quiz");
       }
 
-      navigate("/");
+      navigate("/learn");
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     }

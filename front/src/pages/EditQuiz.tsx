@@ -116,7 +116,7 @@ export const EditQuiz = () => {
 
       if (!response.ok) throw new Error("Failed to update quiz");
 
-      navigate("/");
+      navigate("/learn");
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     } finally {

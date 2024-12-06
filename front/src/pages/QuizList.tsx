@@ -1,4 +1,3 @@
-// src/pages/QuizList.tsx
 import { useState, useEffect } from "react";
 import { QuizCard } from "../components/QuizCard";
 import { Alert, AlertDescription } from "../components/ui/alert";
@@ -32,6 +31,12 @@ export const QuizList: React.FC = () => {
     fetchQuizzes();
   }, []);
 
+  const handleDelete = (deletedQuizId: number) => {
+    setQuizzes((currentQuizzes) =>
+      currentQuizzes.filter((quiz) => quiz._id !== deletedQuizId)
+    );
+  };
+
   if (loading) {
     return (
       <div className='flex items-center justify-center min-h-[200px]'>
@@ -59,7 +64,11 @@ export const QuizList: React.FC = () => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
       {quizzes.map((quiz) => (
-        <QuizCard key={quiz._id} quiz={quiz} />
+        <QuizCard
+          key={quiz._id}
+          quiz={quiz}
+          onDelete={() => handleDelete(quiz._id)}
+        />
       ))}
     </div>
   );

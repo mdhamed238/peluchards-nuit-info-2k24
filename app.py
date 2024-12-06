@@ -3,9 +3,8 @@ from flask_cors import CORS
 from src.config import Config
 from src.quiz import db
 from src.database import DatabaseManager
-from src.quiz import Quiz, Question
+
 import json
-from src.quiz import Quiz, Question
 from src.routes import init_routes
 # from src.humain import Corps
 
@@ -39,4 +38,5 @@ def activities():
 
 if __name__ == '__main__':
     DatabaseManager.init_db(app)
+    
     app.run(debug=True)
