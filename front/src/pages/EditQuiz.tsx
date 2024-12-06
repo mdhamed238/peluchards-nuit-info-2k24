@@ -42,7 +42,7 @@ export const EditQuiz = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/quizzes/${id}`);
+        const response = await fetch(`${BASE_URL}/api/quizzes/${id}`);
         if (!response.ok) throw new Error("Failed to fetch quiz");
 
         const data = await response.json();
@@ -102,7 +102,7 @@ export const EditQuiz = () => {
   const handleSubmit = async () => {
     try {
       setSaving(true);
-      const response = await fetch(`${BASE_URL}/quizzes/${id}`, {
+      const response = await fetch(`${BASE_URL}/api/quizzes/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

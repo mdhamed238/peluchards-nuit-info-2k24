@@ -74,7 +74,7 @@ export const CreateQuiz = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch(`${BASE_URL}/quizzes`, {
+      const response = await fetch(`${BASE_URL}/api/quizzes`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

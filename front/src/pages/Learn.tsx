@@ -1,7 +1,7 @@
 import React from "react";
-import { QuizList } from "../pages/QuizList";
+import { QuizList } from "./QuizList";
 import { useNavigate } from "react-router-dom";
-import { Button } from "./ui/button";
+import { Button } from "../components/ui/button";
 import { Plus } from "lucide-react";
 
 const Learn: React.FC = () => {

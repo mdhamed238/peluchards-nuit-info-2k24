@@ -12,7 +12,7 @@ export const QuizList: React.FC = () => {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/quizzes`);
+        const response = await fetch(`${BASE_URL}/api/quizzes`);
         if (!response.ok) {
           throw new Error("Failed to fetch quizzes");
         }

@@ -9,10 +9,10 @@ import {
 import { QuizView } from "./pages/QuizView";
 import { CreateQuiz } from "./pages/CreateQuiz";
 import { EditQuiz } from "./pages/EditQuiz";
-import Welcome from "./components/Welcome";
-import Learn from "./components/Learn";
-import Share from "./components/Share";
-import Act from "./components/Act";
+import Welcome from "./pages/Welcome";
+import Learn from "./pages/Learn";
+import Share from "./pages/Share";
+import Act from "./pages/Act";
 
 // Navigation component
 const Navigation: React.FC = () => {

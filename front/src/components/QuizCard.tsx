@@ -35,7 +35,7 @@ export const QuizCard: React.FC<QuizCardProps> = ({ quiz, onDelete }) => {
   const handleDelete = async () => {
     try {
       setIsDeleting(true);
-      const response = await fetch(`${BASE_URL}/quizzes/${quiz._id}`, {
+      const response = await fetch(`${BASE_URL}/api/quizzes/${quiz._id}`, {
         method: "DELETE",
       });
 

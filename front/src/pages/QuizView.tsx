@@ -41,7 +41,7 @@ export const QuizView: React.FC = () => {
     const fetchQuiz = async () => {
       try {
         if (!id) return;
-        const response = await fetch(`${BASE_URL}/quizzes/${id}`);
+        const response = await fetch(`${BASE_URL}/api/quizzes/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch quiz");
         }
