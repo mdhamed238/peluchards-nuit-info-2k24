@@ -1,7 +1,8 @@
 # app/routes.py
 from flask import jsonify, request, session, redirect
 from src.quiz import Quiz, Question, Option, db
-from src.user import User
+from src.user import Utilisateur
+from src.humain import Corps, Parrallele
 def init_routes(app):
     @app.route('/corps/')
     def parties_du_corps():
