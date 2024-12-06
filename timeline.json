@@ -1,0 +1,98 @@
+{
+    "Départ" : {
+        "Date" : "9 avril 2017",
+        "Lieu" : "Lorient - France"
+    },
+    "Etape 1" : {
+        "Date" : "Avril 2017",
+        "Lieu" : "Lorient - France"
+    },
+    "Etape 2" : {
+        "Date" : "Mai à Juillet 2017",
+        "Lieu" : "Les Bermudes"
+    },
+    "Etape 3" : {
+        "Date" : "Juillet 2017",
+        "Lieu" : "Cuba"
+    },
+    "Etape 4" : {
+        "Date" : "Août à Septembre 2017",
+        "Lieu" : "Lorient - France"
+    },
+    "Etape 5" : {
+        "Date" : "Semptembre 2017 à Janvier 2018",
+        "Lieu" : "Guadeloupe"
+    },
+    "Etape 6" : {
+        "Date" : "Mars 2018",
+        "Lieu" : "Panama"
+    },
+    "Etape 7" : {
+        "Date" : "Mars à Avril 2018",
+        "Lieu" : "Pérou"
+    },
+    "Etape 8" : {
+        "Date" : "Juin 2018",
+        "Lieu" : "Chili"
+    },
+    "Etape 9" : {
+        "Date" : "Août 2018",
+        "Lieu" : "Robinson Island"
+    },
+    "Etape 10" : {
+        "Date" : "Septembre 2018",
+        "Lieu" : "Rapa Nui"
+    },
+    "Etape 11" : {
+        "Date" : "Octobre 2018",
+        "Lieu" : "Polynésie Française"
+    },
+    "Etape 12" : {
+        "Date" : "Novembre 2018",
+        "Lieu" : "Iles Samoa"
+    },
+    "Etape 13" : {
+        "Date" : "Décembre 2018",
+        "Lieu" : "Iles Tonga"
+    },
+    "Etape 14" : {
+        "Date" : "Janvier 2019",
+        "Lieu" : "Iles Fidji"
+    },
+    "Etape 15" : {
+        "Date" : "Février et Mars 2018",
+        "Lieu" : "Nouvelle-Calédonie"
+    },
+    "Etape 16" : {
+        "Date" : "Avril 2019",
+        "Lieu" : "Le Vanuatu"
+    },
+    "Etape 17" : {
+        "Date" : "Avril 2019",
+        "Lieu" : "Iles Salomon"
+    },
+    "Etape 18" : {
+        "Date" : "Juin 2019",
+        "Lieu" : "Bali - Indonésie"
+    },
+    "Etape 19" : {
+        "Date" : "Juin et Juillet 2019",
+        "Lieu" : "Jakarta - Indonésie"
+    },
+    "Etape 20" : {
+        "Date" : "Août à Septembre 2019",
+        "Lieu" : "Malaisie"
+    },
+    "Etape 21" : {
+        "Date" : "Septembre et Octobre 2019",
+        "Lieu" : "Palawan - Philippines"
+    },
+    "Etape 22" : {
+        "Date" : "Octobre 2019 à Février 2020",
+        "Lieu" : "Hong Kong"
+    },
+    "Etape 23" : {
+        "Date" : "Février à Août 2020",
+        "Lieu" : "Japon"
+    }
+}
