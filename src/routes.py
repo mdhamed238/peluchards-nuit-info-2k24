@@ -1,5 +1,5 @@
 # app/routes.py
-from flask import jsonify, request, session, redirect
+from flask import jsonify, request
 from src.quiz import Quiz, Question, Option, db
 from src.user import User
 def init_routes(app):
@@ -164,29 +164,28 @@ def init_routes(app):
         """
         Connecte un utilisateur
         
-        :param email: str : email de l'utilisateur
+        :param username: str : nom d'utilisateur
         :param password: str : mot de passe de l'utilisateur
-
-
+    
         :return: json : message de connexion réussie ou erreur
         :return: int : code d'erreur 401 ou réussite 201
         """
         data = request.get_json()
-        email = data.get('email')
+        username = data.get('username')
         password = data.get('password')
-        user = User.query.filter_by(email=email).first()
+        
+        user = User.query.filter_by(username=username).first()
+        
         if user and user.check_password_verification(password):
-            session['user_id'] = user.id
             return jsonify({
                 'message': 'Login successful',
                 'user_id': user.id,
                 'username': user.username,
-                'email': user.email,
                 'editor': user.editor
             }), 201
         else:
             return jsonify({
-                'error': 'Invalid email or password'
+                'error': 'Invalid username or password'
             }), 401
         
     @app.route('/user/register', methods=['POST'])
@@ -195,69 +194,74 @@ def init_routes(app):
         Enregistre un utilisateur
 
         :param username: str : nom d'utilisateur
-        :param email: str : email de l'utilisateur
         :param password: str : mot de passe de l'utilisateur
 
-        :return: json : message d'enregistrement réussi ou erreur
+        :return: json : message d'enregistrement réussi ou erreur 
         :return: int : code d'erreur 500 ou réussite 201
         """
         data = request.get_json()
         username = data.get('username')
-        email = data.get('email')
         password = data.get('password')
         
+        # Validate required fields
+        if not username or not password:
+            return jsonify({
+                'error': 'Username and password are required'
+            }), 400
+            
+        # Check if username already exists
+        if User.query.filter_by(username=username).first():
+            return jsonify({
+                'error': 'Username already exists'
+            }), 409
+            
         try:
             user = User(
                 username=username,
-                email=email,
                 password=password,
                 editor=False
             )
             db.session.add(user)
             db.session.commit()
-            session['user_id'] = user.id
+            
             return jsonify({
                 'message': 'User registered successfully',
                 'user_id': user.id,
                 'username': user.username,
-                'email': user.email,
                 'editor': user.editor
             }), 201
+            
         except Exception as e:
             db.session.rollback()
             return jsonify({
                 'error': f'Error registering user: {str(e)}'
             }), 500
-
-    @app.route('/user/logout', methods=['GET'])
-    def logout_user():
+            
+    @app.route('/user/data', methods=['POST'])
+    def get_user_data():
         """
-        Déconnecte un utilisateur
-
-        :return: redirect : redirection vers la page d'accueil
+        Récupère les données d'un utilisateur par son username
+        
+        :param username: str : Nom d'utilisateur à rechercher
+        :return: json : données de l'utilisateur ou erreur
+        :return: int : code 200 si succès, 400 si mauvaise requête, 404 si non trouvé
         """
-        session.pop('user_id', None)
-        return redirect('/')
-    
-    @app.route('/user', methods=['GET'])
-    def get_user():
-        """
-        Récupère les informations de l'utilisateur connecté
-
-        :return: json : informations de l'utilisateur ou erreur
-        :return: int : code d'erreur 401 ou réussite 201
-        """
-
-        user_id = session.get('user_id')
-        if user_id:
-            user = User.query.get(user_id)
+        data = request.get_json()
+        username = data.get('username')
+        
+        if not username:
             return jsonify({
-                'user_id': user.id,
-                'username': user.username,
-                'email': user.email,
-                'editor': user.editor
-            }), 201
-        else:
+                'error': 'Username is required'
+            }), 400
+            
+        user = User.query.filter_by(username=username).first()
+        if not user:
             return jsonify({
-                'error': 'User not logged in'
-            }), 401
+                'error': 'User not found'
+            }), 404
+            
+        return jsonify({
+            'id': user.id,
+            'username': user.username,
+            'editor': user.editor
+        }), 200

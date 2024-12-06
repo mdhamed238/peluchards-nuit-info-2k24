@@ -1,8 +1,5 @@
-from flask_sqlalchemy import SQLAlchemy
+from . import db
 from datetime import datetime
-
-db = SQLAlchemy()
-
 class Quiz(db.Model):
     _id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255), nullable=False)

@@ -21,6 +21,7 @@ import {
 import { Clock, Edit2 } from "lucide-react";
 import type { Quiz } from "../types/quiz";
 import { BASE_URL } from "../constants/api";
+import { useAuth } from "../store/AuthContext";
 
 interface QuizCardProps {
   quiz: Omit<Quiz, "questions">;
@@ -29,6 +30,7 @@ interface QuizCardProps {
 
 export const QuizCard: React.FC<QuizCardProps> = ({ quiz, onDelete }) => {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -94,28 +96,32 @@ export const QuizCard: React.FC<QuizCardProps> = ({ quiz, onDelete }) => {
             >
               Start Quiz
             </Button>
-            <Button
-              variant='outline'
-              className='flex-1 hover:bg-sky-50 border-sky-200 text-sky-600 hover:text-sky-700 hover:border-sky-300 gap-2'
-              onClick={(e) => {
-                e.stopPropagation();
-                navigate(`/edit/${quiz._id}`);
-              }}
-            >
-              <Edit2 className='w-4 h-4' />
-              Edit
-            </Button>
-            <Button
-              variant='destructive'
-              className='flex-1'
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowDeleteDialog(true);
-              }}
-              disabled={isDeleting}
-            >
-              {isDeleting ? "Deleting..." : "Delete"}
-            </Button>
+            {user?.editor && (
+              <>
+                <Button
+                  variant='outline'
+                  className='flex-1 hover:bg-sky-50 border-sky-200 text-sky-600 hover:text-sky-700 hover:border-sky-300 gap-2'
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate(`/edit/${quiz._id}`);
+                  }}
+                >
+                  <Edit2 className='w-4 h-4' />
+                  Edit
+                </Button>
+                <Button
+                  variant='destructive'
+                  className='flex-1'
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowDeleteDialog(true);
+                  }}
+                  disabled={isDeleting}
+                >
+                  {isDeleting ? "Deleting..." : "Delete"}
+                </Button>
+              </>
+            )}
           </div>
         </CardFooter>
       </Card>
