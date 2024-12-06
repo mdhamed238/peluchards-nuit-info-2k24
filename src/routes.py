@@ -11,7 +11,7 @@ def init_routes(app):
                 '_id': corps._id,
             }]
         })
-    @app.route("/corps/<int:id>", methods=['GET', 'POST']))
+    @app.route("/corps/<int:id>", methods=['GET', 'POST'])
     def partie_corps(id):
         if request.method = 'POST':
             data = request.get_json()
