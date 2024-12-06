@@ -161,6 +161,16 @@ def init_routes(app):
 
     @app.route('/user/login', methods=['POST'])
     def login_user():
+        """
+        Connecte un utilisateur
+        
+        :param email: str : email de l'utilisateur
+        :param password: str : mot de passe de l'utilisateur
+
+
+        :return: json : message de connexion réussie ou erreur
+        :return: int : code d'erreur 401 ou réussite 201
+        """
         data = request.get_json()
         email = data.get('email')
         password = data.get('password')
@@ -173,7 +183,7 @@ def init_routes(app):
                 'username': user.username,
                 'email': user.email,
                 'editor': user.editor
-            })
+            }), 201
         else:
             return jsonify({
                 'error': 'Invalid email or password'
@@ -181,6 +191,16 @@ def init_routes(app):
         
     @app.route('/user/register', methods=['POST'])
     def register_user():
+        """
+        Enregistre un utilisateur
+
+        :param username: str : nom d'utilisateur
+        :param email: str : email de l'utilisateur
+        :param password: str : mot de passe de l'utilisateur
+
+        :return: json : message d'enregistrement réussi ou erreur
+        :return: int : code d'erreur 500 ou réussite 201
+        """
         data = request.get_json()
         username = data.get('username')
         email = data.get('email')
@@ -211,11 +231,23 @@ def init_routes(app):
 
     @app.route('/user/logout', methods=['GET'])
     def logout_user():
+        """
+        Déconnecte un utilisateur
+
+        :return: redirect : redirection vers la page d'accueil
+        """
         session.pop('user_id', None)
         return redirect('/')
     
     @app.route('/user', methods=['GET'])
     def get_user():
+        """
+        Récupère les informations de l'utilisateur connecté
+
+        :return: json : informations de l'utilisateur ou erreur
+        :return: int : code d'erreur 401 ou réussite 201
+        """
+
         user_id = session.get('user_id')
         if user_id:
             user = User.query.get(user_id)
@@ -224,7 +256,7 @@ def init_routes(app):
                 'username': user.username,
                 'email': user.email,
                 'editor': user.editor
-            })
+            }), 201
         else:
             return jsonify({
                 'error': 'User not logged in'
